@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Kata: Password Check</title>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Password Check</h1>
+    </header>
+
+    <main>
+
+        <form action="#" class="password-form">
+            <label class="password-form__label" for="first-password"></label>
+            <input class="password-form__input" data-cy="first-password" placeholder="Please, enter your password"
+                autocomplete="off" type="password" name="first-password" id="first-password" minlength="10" required>
+
+            <label class="password-form__label" for="second-password"></label>
+            <input class="password-form__input" data-cy="second-password" placeholder="Please, enter your password"
+                autocomplete="off" type="password" name="second-password" id="second-password" minlength="10" required>
+
+            <button type="button" class="password-form__btn-toggle" data-cy="password-form__btn-toggle">Show
+                Password</button>
+        </form>
+
+        <section class="password-check-conditions">
+
+            <p>Passwords are equal<span class="check-equal" data-cy="check-equal">❌</span></p>
+
+            <p>Lower Case Letters<span class="check-lower-case" data-cy="check-lower-case">❌</span></p>
+
+            <p>Upper Case Letters<span class="check-upper-case" data-cy="check-upper-case">❌</span></p>
+
+            <p>Contains Numbers<span class="check-numbers" data-cy="check-numbers">❌</span></p>
+
+            <p>At least 10 characters long<span class="check-for-ten-characters"
+                    data-cy="check-for-ten-characters">❌</span></p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  --font-heading: "Lobster", cursive;
+  --font-regular-text: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: lightsalmon;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 3px 3px 0px black;
+}
+
+p {
+  margin: 0.5rem;
+  font-family: var(--font-regular-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  place-content: center;
+}
+
+/* == Start: Form == */
+.password-form {
+  display: grid;
+  place-content: center;
+  margin-bottom: 2rem;
+}
+
+.password-form__input {
+  border: 2px solid black;
+  margin-bottom: 0.5rem;
+  width: 15rem;
+  font-family: var(--font-regular-text);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.password-form__btn-toggle {
+  background: black;
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid black;
+  font-family: var(--font-regular-text);
+}
+
+.password-form__btn-toggle:hover {
+  background-color: azure;
+  color: darkslategray;
+}
+
+.password-form__btn-toggle:focus,
+.password-form__input:focus {
+  outline: 3px solid yellowgreen;
+}
+
+.password-form__btn-toggle:active {
+  box-shadow: 0px 0px 4px 4px black;
+  scale: 0.95;
+}
+
+.password-form__input::placeholder {
+  font-size: 1rem;
+}
+
+/* Needs to be testet with html rquired and minlength */
+/* .password-form__input:required:not(::placeholder) {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 3px;
+    text-decoration-color: orangered;
+} */
+
+/* == End: Form == */
+
+/* === Start: Passowrd Check Section === */
+.password-check-conditions {
+  text-align: center;
+  max-width: 50ch;
+}
+
+.password-check-conditions span {
+  margin-left: 0.5rem;
+}
+
+/* === End: Passowrd Check Section === */
+
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10rem;
+  }
+
+  .password-form__input {
+    margin-bottom: 1rem;
+  }
+
+  .password-check-conditions p {
+    margin-bottom: 1rem;
+  }
+}
